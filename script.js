@@ -41,10 +41,10 @@ function efectoHabilidades() {
         habilidades[17].classList.add("ochenta");
         habilidades[18].classList.add("ochenta");
         habilidades[19].classList.add("ochenta");
-        habilidades[20].classList.add("ochenta");
-        habilidades[21].classList.add("setenta");
+        habilidades[20].classList.add("creatividad");
+        habilidades[21].classList.add("creatividad");
         habilidades[22].classList.add("creatividad");
-        habilidades[23].classList.add("setenta");
+        habilidades[23].classList.add("creatividad");
         habilidades[24].classList.add("creatividad");
 
     }
