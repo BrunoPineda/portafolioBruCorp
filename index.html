@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Brucorp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <embed src="fondo1.mp3" autostart="true" loop="false" width="450" height="80" hidden>
+    <!--Encabezado-->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">BruCorp©</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#professionalskills" onclick="seleccionar()">PROFESSIONAL SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/bruno1.png" alt="Brucorp">
+            </div>
+            <h1>Bruno Pineda</h1>
+            <h2>Estudiante de Ingenieria informática - programador junior</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/bruno.alonzo.33/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@brucorpparatodos5997"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                <a href="https://www.linkedin.com/in/bruno-pineda-94a5b21b3/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-solid fa-rss"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2 data-aos="fade-up">Sobre Mí</h2>
+            <p data-aos="fade-down"><span>Hola, soy Bruno Pineda.</span> youtuber de videos de sql server gracias a mi profesor Carpio que me enseño las bases además me gusta hacer experimentos como descargar windows o ejecutar en android, optizar los recursos para computadoras
+                viejas, entre otros....</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div data-aos="fade-right" class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong> 8 de abril de 2002
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong> +51 972 282 310
+                        </li>
+                        <li>
+                            <strong>Email</strong> Brunoreto27@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong> Brucorp
+                        </li>
+                        <li>
+                            <strong>Dirección</strong> Lima Perú
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>Full stack junior</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div data-aos="fade-left" class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-android"></i>
+                            <span>ANDROID</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-language"></i>
+                            <span>INGLES</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <button data-aos="flip-left">
+                
+                <a  href="cv Pineda.pdf" class="linkcv"> Descargar CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span></a>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div data-aos="zoom-in" class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Backend</h3>
+                    <div class="skill">
+                        <span>PHP</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Rest API C# .NET - SWAGGER</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Laravel</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Node</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Frontend</h3>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>JS, JQUERY-AJAX</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>REACT</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Bootstrap-tailwind-material</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>69%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Angular</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>69%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenido-seccion">
+            <div data-aos="zoom-in-up" class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Base de datos</h3>
+                    <div class="skill">
+                        <span>SQ LITE</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>MYSQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>SQL SERVER</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>MONGO BD</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>FIREBASE</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>55%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Documentary</h3>
+                    <div class="skill">
+                        <span>Office</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Rational Rose</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>StarUml</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Bizaggi</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Adobe Xd - Figma</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>78%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SECCION SKILLS -->
+        <section class="skills" id="professionalskills">
+            <div data-aos="zoom-in-down" class="contenido-seccion">
+                <h2>Professional Skills</h2>
+                <div class="fila">
+                    <!-- Professional Skills -->
+                    <div class="col">
+                        <div class="skill">
+                            <span>Comunicación</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Trabajo en Equipo</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Creatividad</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>99%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Dedicación</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Proyect Management</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>94%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECCION CURRICULUM -->
+        <section id="curriculum" class="curriculum">
+            <div data-aos="zoom-in-right" class="contenido-seccion">
+                <h2>Curriculum</h2>
+                <div class="fila">
+                    <div class="col izquierda">
+                        <h3>Educación</h3>
+                        <div class="item izq">
+                            <h4>Introducción al Hacking Etico y cibercrimen</h4>
+                            <span class="casa">EnHacke</span>
+                            <span class="fecha">2020</span>
+                            <p>Conocimiento de las aplicaciones de ciberseguridad, pentesting y formas para impedir una vulneración en la red
+                            </p>
+                            <div class="conectori">
+                                <div class="circuloi"></div>
+                            </div>
+                        </div>
+                        <div class="item izq">
+                            <h4>INGLES</h4>
+                            <span class="casa">El Instituto Cultural Peruano Norteamericano (ICPNA)</span>
+                            <span class="fecha">2018 - 2023</span>
+                            <p>Ingles avanazado 7 y comunicación fluida
+                            </p>
+                            <div class="conectori">
+                                <div class="circuloi"></div>
+                            </div>
+                        </div>
+                        <div class="item izq">
+                            <h4>Ingenieria infromática</h4>
+                            <span class="casa">Universidad Ricardo Palma</span>
+                            <span class="fecha">2019 - 2023</span>
+                            <p>Actualemente estoy acabando mi 9vo ciclo de ingenieria informática y mis cursos favoritos son base de datos y contrucción de apis, aparte por mi cuenta eh deployado (subido) mis proyectos en la nube de forma gratuita
+                            </p>
+                            <div class="conectori">
+                                <div class="circuloi"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col derecha">
+                        <h3>Experiencia de trabajo</h3>
+                        <div class="item der">
+                            <h4>Scrum master</h4>
+                            <span class="casa">Consigue Ventas</span>
+                            <span class="fecha">2021 - 3 meses</span>
+                            <p>Siendo lider del area de analista de procesos, ayudar a la empresa a optimizar su daylist y organizar el scrum master
+                            </p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                        </div>
+                        <div class="item der">
+                            <h4>Backend Developer</h4>
+                            <span class="casa">SWGAF</span>
+                            <span class="fecha">2022</span>
+                            <p>Creación de la base de datos, procedimientos almacenados, funciones, triggers, jobs, manejo de git, gitlab, creación de apis en swagger para el consumo del front y era jefe de back asi que capacite a mi equipo conformado por
+                                3 programadores junior
+                            </p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                        </div>
+                        <div class="item der">
+                            <h4>Front Developer</h4>
+                            <span class="casa">Centro de estudios y terapia psicológica Pequeños sin Límites</span>
+                            <span class="fecha">2022</span>
+                            <p>Página landing page para ver las cotizaciones y separar citas
+                            </p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION PORTFOLIO -->
+        <section id="portfolio" class="portfolio">
+            <div data-aos="zoom-out-up" class="contenido-seccion">
+                <h2>PORTFOLIO</h2>
+                <div class="galeria">
+                    <div class="proyecto">
+                        <img src="img/p1.jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Chat con sockets y node</h3>
+                            <p>Con salas ilimitadas disponibles deployado en heroku, sonidos de envio, recepción y traductor</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p2.jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Sistema de manejo de archivos con node</h3>
+                            <p>Permite crear carpetas, subir varios archivos o uno solo al mismo tiempo, compartir archivos, visualizar las imagenes y eliminarlos todo manejado con apis de creación de archivos</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p3.jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Sistema de control de asistencia en PHP</h3>
+                            <p>Sistema que verifica si el empleado llego tarde, puntual, falto si entro en un turno que no debe, si es feriado además de sacar su reporte con todas sus asistencias y su estado y para el lado del administrador puede modificar
+                                los datos para que sea editable para ucalquier empresa y que ponga sus datos personas</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p4.jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Página landing page con html, css y javascritp</h3>
+                            <p>Permitia atraves de un mondal ver los yapes para hacer una cita, ver la dirección a traves de una api de google maps para ver mapas, acerca de la empresa y era responsive</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p5.jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Sistema de peluqueria en PHP</h3>
+                            <p>El sistema permitia generar boletas, administrar provedores, clientes, productos, separar citas entre otros</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p7.jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Banco hecho en c# y sql server</h3>
+                            <p>El sistema permite simular las acciones de un cajero como el retiro, transferencia bancaria, todo con validaciones si existe la persona o si te pasaste del monto, genera ticket de que hiciste un retiro y con creación de usuarios
+                                para el modulo de adminsitrador</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p8 (1).jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Apis para consumo de una farmacia</h3>
+                            <p>Las apis usaban entity framework y para encriptar datos se usaba store procedure luego se envia una respuesta que se capturaba en el controlador para luego ponerlo en un message y que lo consuma el front asi que ya no se necesitaba
+                                validaciones porque todo ya estaba validado desde el backend, en total fueron 25 apis como la compra de productos, verificación del stock, un job que constantemente actualizaba el estado de producto a vencido cuando lo
+                                este
+                            </p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p8 (2).jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Sistema de farmacia hecho en C#</h3>
+                            <p>Permite al usuario administrar los clientes, provedores, empleados, ingresos, egresos, generar compra con boletas, verifiación de las boletas para que no suplanten y dashboard administrativo</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p8 (4).jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Procedimientos almacenados de encriptación en sql server</h3>
+                            <p>Al momento de insertar un usuario, su contraseña y DNI se encriptaba a lo cual ni siquiera los empleados de base de datos podian saber la información, la unica forma era con la key que solo lo sabia yo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION PORTFOLIO -->
+        <section id="portfolio" class="portfolio">
+            <div data-aos="zoom-out-left" class="contenido-seccion">
+                <h2>CERTIFICADOS</h2>
+                <div class="galeria">
+                    <div class="proyecto">
+                        <img src="img/1 (1).jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Certidicado de hacking ético</h3>
+                            <p>Saltos, vpns, vunerabilidades y como detenerlas</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/1 (2).jpeg" alt="Brucorp">
+                        <div class="overlay">
+                            <h3>Certificado de PYTHON</h3>
+                            <p>Permitio ver como se usaban los if, while, swtich, castear en python además de que no se usa ";"</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/1 (3).jpeg" alt="Brucorp">
+                        <div class="overlay ">
+                            <h3>Certificado de scrum master</h3>
+                            <p>3 meses de experiencia vimos todo del product back log</p>
+                        </div>
+                    </div>
+                    <div class="proyecto ">
+                        <img src="img/1 (4).jpeg" alt="Brucorp">
+                        <div class="overlay ">
+                            <h3>Certificado que confirma mi estadia por 3 meses</h3>
+                            <p>Se organizaban las tareas para que hagan los demás modulos</p>
+                        </div>
+                    </div>
+                    <div class="proyecto ">
+                        <img src="img/1 (5).jpeg " alt="Brucorp">
+                        <div class="overlay ">
+                            <h3>Certificado de segundo puesto</h3>
+                            <p>Era segundo puesto de los mejores proyectos de la universidad con varios salones desde la documentación hasta la funcionalidad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION CONTACTO -->
+        <section id="contacto " class="contacto ">
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="contenido-seccion ">
+                <h2>CONTACTO</h2>
+                <div class="fila ">
+                    <!-- Formulario -->
+                    <div class="col">
+                        <form id="form">
+                            <div class="col ">
+                                <div class="field">
+                                    <label for="name">name</label>
+                                    <input type="text" name="name" id="name">
+                                </div>
+                                <div class="field">
+                                    <label for="number">number</label>
+                                    <input type="text" name="number" id="number">
+                                </div>
+                                <div class="field">
+                                    <label for="correo">correo</label>
+                                    <input type="text" name="correo" id="correo">
+                                </div>
+                                <div class="field">
+                                    <label for="theme">theme</label>
+                                    <input type="text" name="theme" id="theme">
+                                </div>
+                                <div class="field">
+                                    <label for="message">message</label>
+                                    <textarea name=" " id="message" cols="30 " rows="10 " placeholder="Mensaje " class="message"></textarea>
+                                    <input type="text" name="message" id="message">
+                                </div>
+                            </div>
+                            <div class="col ">
+
+                                <button id="button">
+                            Enviar Mensaje<i class="fa-solid fa-paper-plane "></i>
+                            <span class="overlay "></span>
+                            </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Mapa -->
+                    <div class="col ">
+
+                        <div class="info ">
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-location-dot "></i> Lima Perú
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-mobile-screen "></i> Llamanos: 972 282 310
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope "></i> Email: Brunoreto27@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <a href="#inicio " class="arriba ">
+                <i class="fa-solid fa-angles-up "></i>
+            </a>
+            <div class="redes ">
+                <a href="# "><i class="fa-brands fa-facebook-f "></i></a>
+                <a href="# "><i class="fa-brands fa-twitter "></i></a>
+                <a href="# "><i class="fa-brands fa-skype "></i></a>
+                <a href="# "><i class="fa-brands fa-linkedin-in "></i></a>
+                <a href="# "><i class="fa-solid fa-rss "></i></a>
+            </div>
+        </footer>
+
+        </div>
+    </section>
+    <script src="script.js "></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('csOvZ9a53KM7jM5xE')
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
