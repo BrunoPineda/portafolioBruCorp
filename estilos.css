@@ -14,55 +14,71 @@ html {
 /*MENU*/
 
 .contenedor-header {
-  background: #3aaada;
-  position: fixed;
-  width: 100%;
+  background: #2c3e50; /* Dark blue background */
+  color: #ecf0f1; /* Light text color for contrast */
+  padding: 10px 0; /* Padding around the header */
+  position: sticky; /* Makes the header stick to the top */
   top: 0;
-  left: 0;
-  z-index: 99;
+  z-index: 1000;
 }
 
-.contenedor-header header {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
+/* Assuming the parent of .logo has no display property set, we'll set it to flex */
+.parent-of-logo {
+  display: flex; /* This enables flexbox */
+  justify-content: center; /* This centers the .logo horizontally */
+  align-items: center; /* This centers the .logo vertically */
+  height: 50px; /* Set the height of the parent element */
 }
 
-.contenedor-header header .logo a {
-  font-family: "Righteous";
-  font-size: 36px;
-  color: #1b1edb;
-  text-decoration: none;
+.logo a {
+  font-size: 1.5em; /* Adjust the size of your logo text */
+  color: #ffffff; /* Adjust the color of your logo text */
+  text-decoration: none; /* Removes underline from the logo text */
 }
 
-.contenedor-header header ul {
-  list-style: none;
-  display: flex;
+header nav ul {
+  list-style-type: none; /* Removes the default list styling */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Aligns the navigation items in a row */
+  justify-content: center; /* Centers the navigation items */
 }
 
-.contenedor-header header nav ul li a {
-  text-align: none;
-  color: #fff;
-  margin: 0 15px;
-  padding: 3px;
-  transition: 0.5s;
-  text-decoration: none;
+header nav ul li {
+  margin: 0 15px; /* Spacing between navigation items */
 }
 
-.contenedor-header header nav ul li a:hover {
-  color: #1b1edb;
+header nav ul li a {
+  color: #ecf0f1; /* Light color for navigation links */
+  text-decoration: none; /* Removes underline from the links */
+  font-weight: normal; /* Regular font weight for the links */
+  font-size: 1.1em; /* Slightly larger font size for readability */
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #f39c12; /* Highlight color for hover and active states */
+  border-bottom: 2px solid #f39c12; /* Adds a bottom border on hover */
 }
 
 .nav-responsive {
-  background-color: #3aaada;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: none;
+  display: none; /* Hides the responsive menu by default */
+}
+
+@media (max-width: 768px) {
+  /* For mobile devices */
+  header nav ul {
+    flex-direction: column; /* Stacks the navigation items vertically */
+  }
+
+  .nav-responsive {
+    display: block; /* Shows the responsive menu icon */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2em;
+    color: #ecf0f1;
+  }
 }
 
 /* SECCION I N I C I O */
@@ -79,6 +95,7 @@ html {
   color: #fff;
   display: flex;
   align-items: center;
+  z-index: -2;
 }
 
 .inicio .contenido-banner {
@@ -91,12 +108,23 @@ html {
 }
 
 .inicio .contenido-banner img {
-  margin-top: 40px;
-  border: 10px solid #3aaada;
-  display: block;
-  width: 80%;
-  margin: auto;
-  border-radius: 100%;
+  width: 250px; /* Fixed width */
+  height: 250px; /* Fixed height to match the width for a perfect circle */
+  margin: 40px auto 20px; /* Top margin 40px, horizontal centering, and bottom margin 20px */
+  border-radius: 50%; /* Makes the image round */
+  border: 10px solid #254361; /* Solid border with a specific color */
+  overflow: hidden; /* Ensures the image stays within the border-radius */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3),
+    /* Drop shadow for depth */ inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow for inset effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Add a hover effect for interactivity */
+.inicio .contenido-banner img:hover {
+  transform: translateY(-25px) scale(1.5); /* Moves the image up and scales it up by 10% */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5),
+    /* More pronounced drop shadow for depth */ inset 0 0 15px
+      rgba(0, 0, 0, 0.3); /* More pronounced inner shadow for inset effect */
 }
 
 .inicio .contenido-banner h1 {
@@ -126,6 +154,16 @@ html {
 
 .inicio .contenido-banner .redes a:hover {
   background-color: #1b1edb;
+}
+
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .sobremi {
@@ -181,7 +219,7 @@ html {
 
 .sobremi .fila .col ul li strong {
   display: inline-block;
-  color: #3aaada;
+  color: #2c3e50;
   width: 130px;
 }
 
@@ -211,7 +249,7 @@ html {
 }
 
 .sobremi .fila .col .contenedor-intereses .interes:hover {
-  background-color: #3aaada;
+  background-color: #2c3e50;
 }
 
 .sobremi .fila .col .contenedor-intereses .interes i {
@@ -239,7 +277,7 @@ html {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #3aaada;
+  background-color: #2c3e50;
   z-index: -1;
   transition: 1s;
 }
@@ -298,7 +336,7 @@ html {
 }
 
 .skills .skill .progreso {
-  background-color: #3aaada;
+  background-color: #2c3e50;
   position: absolute;
   top: 0;
   left: 0;
@@ -309,7 +347,7 @@ html {
   position: absolute;
   height: 40px;
   width: 40px;
-  background-color: #3aaada;
+  background-color: #2c3e50;
   border-radius: 50px;
   line-height: 40px;
   text-align: center;
@@ -544,10 +582,16 @@ html {
 }
 
 .curriculum h2 {
-  font-size: 48px;
-  font-family: "Righteous";
-  text-align: center;
-  padding: 20px 0;
+  padding: 25px;
+  margin-bottom: 30px;
+  background-color: #252a2e;
+  position: relative;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    /* Outer shadow */ inset 0 -10px 10px rgba(0, 0, 0, 0.2),
+    /* Inner top shadow for depth */ inset 0 10px 10px rgba(255, 255, 255, 0.1); /* Inner bottom light for 3D effect */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top edge highlight */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* Subtle bottom edge shadow */
 }
 
 .curriculum .fila {
@@ -579,6 +623,10 @@ html {
   margin-bottom: 30px;
   background-color: #252a2e;
   position: relative;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    /* Outer shadow */ inset 0 -10px 10px rgba(0, 0, 0, 0.2),
+    /* Inner top shadow for depth */ inset 0 10px 10px rgba(255, 255, 255, 0.1); /* Inner bottom light for 3D effect */
 }
 
 .curriculum .fila .item h4 {
@@ -587,7 +635,7 @@ html {
 }
 
 .curriculum .fila .item .casa {
-  color: #3aaada;
+  color: #2c3e50;
   font-size: 22px;
   font-weight: bold;
   display: block;
@@ -595,7 +643,7 @@ html {
 
 .curriculum .fila .item .fecha {
   display: block;
-  color: #3aaada;
+  color: #2c3e50;
   margin-bottom: 10px;
 }
 
@@ -604,18 +652,18 @@ html {
 }
 
 .curriculum .fila .izq {
-  border-right: 2px solid #3aaada;
+  border-right: 2px solid #2c3e50;
   margin-right: 20px;
 }
 
 .curriculum .fila .der {
-  border-left: 2px solid #3aaada;
+  border-left: 2px solid #2c3e50;
   margin-left: 20px;
 }
 
 .curriculum .fila .item .conectori {
   height: 2px;
-  background-color: #3aaada;
+  background-color: #2c3e50;
   width: 47px;
   position: absolute;
   top: 50%;
@@ -628,7 +676,7 @@ html {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background-color: #3aaada;
+  background-color: #2c3e50;
   float: right;
   position: relative;
   bottom: 4px;
@@ -636,7 +684,7 @@ html {
 
 .curriculum .fila .item .conectord {
   height: 2px;
-  background-color: #3aaada;
+  background-color: #2c3e50;
   width: 47px;
   position: absolute;
   top: 50%;
@@ -649,7 +697,7 @@ html {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background-color: #3aaada;
+  background-color: #2c3e50;
   float: left;
   position: relative;
   bottom: 4px;
@@ -697,6 +745,7 @@ html {
 .portfolio .galeria .proyecto img {
   width: 100%;
   display: block;
+  border-radius: 15px; /* Makes the image round */
 }
 
 .portfolio .galeria .proyecto .overlay {
@@ -709,15 +758,25 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: 1s;
+  transition: transform 0.5s, opacity 0.5s; /* Smooth transition for transform and opacity */
   font-size: 18px;
   letter-spacing: 3px;
   opacity: 0;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
+    /* Shadow for depth */ inset 0 5px 5px rgba(255, 255, 255, 0.1),
+    /* Top inner shadow for 3D effect */ inset 0 -5px 5px rgba(0, 0, 0, 0.1); /* Bottom inner shadow for 3D effect */
+}
+
+.portfolio .galeria .proyecto:hover .overlay {
+  opacity: 1; /* Show the overlay on hover */
+  transform: translateY(-5px) scale(1.02); /* Slight move up and scale for a popping effect */
 }
 
 .portfolio .galeria .proyecto .overlay h3 {
   margin-bottom: 20px;
   transition: 1s;
+  border-radius: 15px; /* Makes the image round */
 }
 
 .portfolio .galeria .proyecto .overlay:hover {
@@ -791,7 +850,7 @@ html {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #3aaada;
+  background-color: #2c3e50;
   z-index: -1;
   transition: 1s;
 }
@@ -823,7 +882,7 @@ html {
 }
 
 .contacto .col .info ul li i {
-  color: #3aaada;
+  color: #2c3e50;
   display: inline-block;
   margin-right: 20px;
 }
@@ -859,7 +918,7 @@ footer .arriba {
   display: block;
   width: 50px;
   height: 50px;
-  background-color: #3aaada;
+  background-color: #2c3e50;
   color: #fff;
   position: absolute;
   left: 50%;
@@ -938,21 +997,20 @@ footer .arriba {
     width: 100%;
   }
 }
- 
+
 /*CARRUSEL*/
 .console-container {
-  margin:0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
- 
-
+  font-size: 3em; /* Default font size */
   background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
   overflow: hidden;
 }
+
 .scope {
   top: 150px;
   bottom: 100px;
@@ -990,6 +1048,7 @@ footer .arriba {
 .scope span:hover img {
   transform: translateY(-50px) scale(1.7);
 }
+
 @keyframes slid {
   0% {
     transform: perspective(1000px) rotateY(0deg);
@@ -1007,137 +1066,342 @@ body {
 .hidden {
   opacity: 0;
 }
-.console-container {
-  font-family: Khula;
-  font-size: 4em;
-  text-align: center;
-  height: 200px;
-  width: 600px;
-  display: block;
-  position: absolute;
-  color: white;
-  top: -1300px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.console-underscore {
-  display: inline-block;
-  position: relative;
-  top: -0.14em;
-  left: 10px;
-}
-/*slider*/
-.slider{
-  width: 100%;
-  margin: auto;
-  height: 900px;
-  overflow: hidden;
+
+/* If .console-container needs to be responsive */
+@media (max-width: 850px) {
+  .console-container {
+    /* Adjust styles for smaller screens */
+    max-width: 100%; /* Full width on smaller screens */
+    font-size: 2em; /* Smaller font size on smaller screens */
+  }
 }
 
-.slider ul{
+.slider {
+  width: 100%;
+  margin: auto;
+  height: 900px; /* Adjust as needed for your design */
+  overflow: hidden;
+  border-radius: 20px; /* Adds rounded corners to the slider */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adds depth with a shadow */
+}
+
+/* Ensure the direct children of the slider also have rounded corners */
+.slider > * {
+  border-radius: 20px; /* Maintain the rounded corner look */
+  overflow: hidden; /* Ensures content doesn't overflow the rounded corners */
+}
+
+/* Styles for the unordered list in the slider */
+.slider ul {
   padding: 0;
   display: flex;
   width: 400%;
   animation: slider 20s infinite alternate;
-  animation-timing-function: linear;
+  animation-timing-function: ease-in-out; /* Smooth start and end */
 }
 
-.slider li{
+/* Individual list items */
+.slider li {
   width: 100%;
   list-style: none;
+  background: #fff; /* Optional: adds a background to each slide */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.slider li img{
+/* Styles for images in the list items */
+.slider li img {
   width: 100%;
+  height: auto;
+  border-radius: 20px; /* Rounded corners for images */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
 }
 
-@keyframes slider{
-  0% {margin-left: 0;}
-  20% {margin-left: 0;}
-  25% {margin-left: -100%;}
-  45% {margin-left: -100%;}
-  50% {margin-left: -200%;}
-  70% {margin-left: -200%;}
-  75% {margin-left: -300%;}
-  100% {margin-left: -300%;}
+/* Hover effect for scaling up the image */
+.slider li img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image */
+}
+@keyframes slider {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
 }
 
+.flag {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative; /* Agrega esta línea para que el z-index funcione */
+}
+
+#peru-flag,
+#usa-flag {
+  position: absolute; /* Agrega esta línea para posicionar las banderas de manera absoluta */
+  z-index: 2; /* Asegúrate de que las banderas tengan un z-index mayor que los otros elementos */
+}
+
+.text {
+  text-align: center;
+  margin-top: 20px;
+  position: relative; /* Agrega esta línea para que el z-index funcione */
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.flip-card {
+  width: 600px; /* Adjust width as needed */
+  height: 320px; /* Adjust height as needed */
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  overflow: auto; /* In case content is larger than the container */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg) scale(2.5);
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 800px) {
+  .flip-card {
+    max-width: 90%; /* Take up a larger percentage of the screen */
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Remove scale for smaller devices */
+  }
+
+  .flip-card-front img,
+  .flip-card-back img {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Adjust height automatically */
+  }
+}
 /*VIDEOS*/
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .gallery img {
-    width: 200px;
-    height: auto;
-    margin: 10px;
-    cursor: pointer;
-  }
-  
-  .modal {
-   margin-top: 800px;
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 15%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .modal-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #f1f1f1;
-    cursor: pointer;
-  }
-  
-  #video-player {
-    width: 80%;
-    height: auto;
-  }
-  
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
-  }
-  .gallery-item {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .gallery-item img {
-    width: 50%;
-    height: auto;
-    transition: transform 0.3s;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  .gallery-item:hover img {
-    transform: scale(1.1);
+.gallery img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/*color theme*/
+/* Centering container for the theme toggle button */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
+/* Styles for the theme toggle button */
+.theme-toggle {
+  position: absolute; /* Absolute positioning within the container */
+  top: 110px; /* Adjust as needed for vertical positioning */
+  right: 50px; /* Position from the right edge of the container */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 40px; /* Increased font size for larger icons */
+  color: #f1c40f; /* Default color: yellow for the sun */
+  transition: transform 0.3s ease;
+}
+
+/* Positioning for icons */
+.theme-toggle i {
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+/* Initially hide the moon icon */
+.theme-toggle .fa-moon {
+  opacity: 0;
+  color: white; /* Color for the moon icon */
+}
+
+/* Change the color to white when the moon icon is active */
+.theme-toggle.active {
+  color: white;
+}
+
+/* When active, hide the sun icon and show the moon icon */
+.theme-toggle.active .fa-sun {
+  opacity: 0;
+}
+
+.theme-toggle.active .fa-moon {
+  opacity: 1;
+}
+
+.modal {
+  margin-top: 800px;
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 15%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Fixed positioning relative to the viewport */
+  top: 0; /* Align top edge with the viewport */
+  left: 0; /* Align left edge with the viewport */
+  width: 100%; /* Full width */
+  max-height: 100vh; /* Maximum height is the full height of the viewport */
+  overflow-y: auto; /* Scrollable content if it overflows */
+  box-sizing: border-box; /* Include padding and border in the element's total dimensions */
+  padding: 20px; /* Padding inside the modal */
+  z-index: 1000; /* Ensure the modal is above other content */
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+#video-player {
+  width: 80%;
+  height: auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+.gallery {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Space between gallery items */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: calc(33.333% - 40px); /* Three items per row, subtracting the gap */
+  display: flex; /* Use flex to center the image inside the item */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 20px; /* Add margin for spacing */
+  border-radius: 10px; /* Rounded corners for the frame */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+    /* Outer shadow for 3D effect */ inset 0 4px 8px rgba(255, 255, 255, 0.1); /* Inner shadow for inset effect */
+  transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for shadows and transform */
+}
+
+.gallery-item img {
+  width: 80%; /* Smaller width to allow for 3D frame visibility */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s; /* Smooth transform transition */
+  border-radius: 10px; /* Rounded corners to match the .gallery-item */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Enlarge image */
+}
+
+.gallery-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4),
+    /* Enhanced outer shadow on hover */ inset 0 8px 16px
+      rgba(255, 255, 255, 0.2); /* Enhanced inner shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-item {
+    width: calc(50% - 40px); /* Two items per row */
   }
-  .gallery-item:hover .item-overlay {
-    opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    width: calc(100% - 40px); /* One item per row */
   }
-  .item-overlay {
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
+}
+overlay {
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}

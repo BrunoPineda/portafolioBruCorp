@@ -21,6 +21,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+
 </head>
 
 <body>
@@ -28,10 +30,16 @@
     <embed src="fondo1.mp3" autostart="true" loop="false" width="450" height="80" hidden>
     <!--Encabezado-->
     <div class="contenedor-header">
+        <button onclick="changeLanguage('qu')">Lenguaje</button>
+    <div id="google_translate_element"></div>
+
         <header>
-            <div class="logo">
-                <a href="#">BruCorp©</a>
+            <div class="parent-of-logo"> <!-- This is the parent element with flexbox properties -->
+                <div class="logo">
+                    <a href="#">BruCorp©</a>
+                </div>
             </div>
+            
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
@@ -47,10 +55,23 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </header>
+      
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-sun"></i> <!-- Sun Icon -->
+                <i class="fas fa-moon"></i> <!-- Moon Icon -->
+            </button>
+         
+          
+          
     </div>
 
+    
+ 
     <!-- SECCION INICIO -->
     <section id="inicio" class="inicio">
+        <video autoplay muted loop id="video-background">
+            <source src="videos/video.mp4" type="video/mp4">
+          </video>
         <div class="contenido-banner">
             <div class="contenedor-img">
                 <img src="img/me.jpeg" alt="Brucorp">
@@ -144,7 +165,7 @@
 
             <button data-aos="flip-left">
                 
-                <a  href="cv.pdf" class="linkcv"> Descargar CV <i class="fa-solid fa-download"></i>
+                <a  href="Bruno Pineda.pdf" class="linkcv"> Descargar CV <i class="fa-solid fa-download"></i>
                     <span class="overlay"></span></a>
             </button>
         </div>
@@ -460,15 +481,35 @@
                                 <div class="circulod"></div>
                             </div>
                         </div>
+                        <div class="item der">
+                            <h4>Base de de datos, desarrollo y soporte</h4>
+                            <span class="casa">Centro de estudios y terapia psicológica Pequeños sin Límites</span>
+                            <span class="fecha">2022</span>
+                            <p>Página landing page para ver las cotizaciones y separar citas
+                            </p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                        </div>
+                        <div class="item der">
+                            <h4>Engineer Software</h4>
+                            <span class="casa">Centro de estudios y terapia psicológica Pequeños sin Límites</span>
+                            <span class="fecha">2022</span>
+                            <p>Página landing page para ver las cotizaciones y separar citas
+                            </p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCION PORTFOLIO -->
+        <!-- SECCION PORTAFOLIO -->
         <section id="portfolio" class="portfolio">
             <div data-aos="zoom-out-up" class="contenido-seccion">
-                <h2>PORTFOLIO 2022</h2>
+                <h2>PORTAFOLIO 2022</h2>
                 <div class="galeria">
                     <div class="proyecto">
                         <img src="img/p1.jpeg" alt="Brucorp">
@@ -577,14 +618,15 @@
   }
           </style>
     
-        <!-- SECCION PORTFOLIO -->
+        <!-- SECCION PORTAFOLIO -->
         <section id="portfolio" class="portfolio">
             <div data-aos="zoom-out-up" class="contenido-seccion">
-                <h2 data-aos="zoom-out-up">PORTFOLIO 2023-I</h2>
+                <h2 data-aos="zoom-out-up">PORTAFOLIO 2023-I</h2>
 
+                <center> 
                 <div data-aos="fade-down" class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
 
-                <center>
+                
                 <div class="scope"  >
                     <span style="--i:1;"><img src="web/descarga (1).png" alt="not found"></span>
                     <span style="--i:2;"><img src="web/a (2).jpeg" alt="not found"></span>
@@ -683,10 +725,10 @@
             </div>
         </section>
 
-         <!-- SECCION PORTFOLIO -->
-         <section id="portfolio" class="portfolio">
+         <!-- SECCION PORTAFOLIO -->
+         <section id="portfolio" class="portfolio1">
             <div data-aos="zoom-out-up" class="contenido-seccion">
-                <h2 data-aos="zoom-out-up">PORTFOLIO 2023-II</h2>
+                <h2 data-aos="zoom-out-up">PORTAFOLIO 2023-II</h2>
                 <div>Diseñar un sistema de gestión que centraliza la información de contactos de proveedores (Entel, Movistar, Claro) y se integra con los CRM de Movistar y Claro. Este sistema permite cotizaciones y búsquedas eficientes por DNI, mejorando el proceso de atención al cliente. Además cada empleado tenia su cuenta con su propia base.</div>
                 <br>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -731,7 +773,7 @@
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-                <div data-aos="fade-down" class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+                 
                 <br>
                 <div>Diseñar un sistema CRM para ver los clientes por consultas ruc sunat, cobranza, contactos, todos los productos, todas las cuentas, actividades, oportunidades, familia y producto y usuarios.</div>
                 <br>
@@ -794,10 +836,7 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <div data-aos="fade-down" class='console-container'>
-                    <span id='text'></span>
-                    <div class='console-underscore' id='console'>&#95;</div>
-                </div>
+                
                 <br>
                 <div>Diseñar un sistema de Armareria para un cliente de EEUU.</div>
                 <br>
@@ -831,14 +870,46 @@
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-                <div data-aos="fade-down" class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+              
                 <br>
                
  
             </div>
         </section>
 
-        <!-- SECCION PORTFOLIO -->
+        <section>
+            <center>
+                <h2 data-aos="zoom-out-up">PORTAFOLIO 2023-III</h2>
+
+                <div class="center-container">
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="img/robot.png" alt="API Image" >
+                        </div>
+                        <div class="flip-card-back">
+                          <p>He diseñado y desplegado una API segura que emplea una robusta clave cifrada. Al intentar el acceso, esta clave se desencripta a través de múltiples iteraciones dentro de nuestra base de datos. Una vez autenticado con éxito, los usuarios pueden acceder al sistema, permitiéndoles ejecutar servicios de Node.js en la nube. Esta metodología asegura que, aunque la operación se realice localmente, el código fuente permanece protegido en un entorno seguro.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
+                  
+                  <div class="center-container">
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="img/wow.png" alt="API Image" >
+                        </div>
+                        <div class="flip-card-back">
+                          <p>He diseñado un sistema que te permite filtrar por departamento, provincia y distrito a todo el nivel del Perú usando json para iterar la información y visualizar en tablas.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+            </center>
+        </section>
+
+        <!-- SECCION PORTAFOLIO -->
         <section id="portfolio" class="portfolio">
             <div data-aos="zoom-out-left" class="contenido-seccion">
                 <h2>CERTIFICADOS</h2>
@@ -955,6 +1026,23 @@
                             <p>Certificado N3</p>
                         </div>
                     </div>
+                    <div class="proyecto ">
+                        <img src="img/certificado11.png " alt="Brucorp">
+                        <div class="overlay ">
+                            <h3>ACRONIS</h3>
+                            <p>Cybersecurity Fundamentals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION PORTAFOLIO -->
+        <section id="portfolio" class="portfolio">
+            <div data-aos="zoom-out-left" class="contenido-seccion">
+                <h2>CERTIFICADO DE INGLES AVANZADO 12</h2>
+                <embed src="icpna.pdf" width="100%" height="500px" type="application/pdf" />
+                     
                 </div>
             </div>
         </section>
@@ -1050,6 +1138,8 @@
         emailjs.init('csOvZ9a53KM7jM5xE')
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
         AOS.init();
     </script>
